@@ -77,7 +77,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"  // Add your EAS project ID
+        "projectId": "cc1af024-9bcf-4b49-830d-0f96f79898b5"
       }
     }
   }
