@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.fichajexpert",
+      "bundleIdentifier": "com.tomassolano.fichajexpert",
       "buildNumber": "1.0.0"
     },
     "android": {
