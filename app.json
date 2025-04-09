@@ -16,10 +16,16 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tomassolano.fichajexpert",
-      "buildNumber": "1.0.0",
+      "buildNumber": "6",  // Incremented from previous build
       "infoPlist": {
-        "NSCameraUsageDescription": "La aplicación necesita acceso a la cámara para escanear códigos QR.",
-        "NSLocationWhenInUseUsageDescription": "La aplicación necesita acceso a la ubicación para registrar los fichajes."
+        "NSCameraUsageDescription": "FichajeXpert utiliza la cámara para escanear códigos QR y verificar fichajes de empleados",
+        "NSMicrophoneUsageDescription": "El micrófono no se usa actualmente, pero es requerido por módulos de terceros",
+        "NSLocationWhenInUseUsageDescription": "La aplicación necesita acceso a la ubicación para registrar los fichajes.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "La aplicación necesita acceso a la ubicación para registrar los fichajes.",
+        "NSPhotoLibraryUsageDescription": "Se requiere acceso a la galería para posibles funcionalidades futuras"
+      },
+      "entitlements": {
+        "aps-environment": "development"  // Remove if not using push notifications
       }
     },
     "android": {
@@ -27,7 +33,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.tomassolano.fichajexpert",  // Cambiado a matching ID
+      "package": "com.tomassolano.fichajexpert",
       "versionCode": 1,
       "permissions": [
         "CAMERA",
@@ -55,7 +61,8 @@
           "icon": "./assets/images/notification-icon.png",
           "color": "#ffffff",
           "sounds": ["./assets/sounds/notification.wav"],
-          "mode": "production"
+          "mode": "production",
+          "isRemoteNotificationsEnabled": false  // Disable if not using push
         }
       ],
       [
@@ -67,6 +74,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"  // Add your EAS project ID
+      }
     }
   }
 }
