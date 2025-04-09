@@ -12,21 +12,27 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tomassolano.fichajexpert",
-      "buildNumber": "1.0.0"
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "La aplicación necesita acceso a la cámara para escanear códigos QR.",
+        "NSLocationWhenInUseUsageDescription": "La aplicación necesita acceso a la ubicación para registrar los fichajes."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yourcompany.fichajexpert",
-      "versionCode": 1
+      "package": "com.tomassolano.fichajexpert",  // Cambiado a matching ID
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -48,7 +54,8 @@
         {
           "icon": "./assets/images/notification-icon.png",
           "color": "#ffffff",
-          "sounds": ["./assets/sounds/notification.wav"]
+          "sounds": ["./assets/sounds/notification.wav"],
+          "mode": "production"
         }
       ],
       [
