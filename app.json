@@ -4,19 +4,13 @@
     "slug": "fichajexpert",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tomassolano.fichajexpert",
-      "buildNumber": "10",  // Incremented from previous build
+      "buildNumber": "10",
       "infoPlist": {
         "NSCameraUsageDescription": "FichajeXpert utiliza la cámara para escanear códigos QR y verificar fichajes de empleados",
         "NSMicrophoneUsageDescription": "El micrófono no se usa actualmente, pero es requerido por módulos de terceros",
@@ -25,14 +19,10 @@
         "NSPhotoLibraryUsageDescription": "Se requiere acceso a la galería para posibles funcionalidades futuras"
       },
       "entitlements": {
-        "aps-environment": "development"  // Remove if not using push notifications
+        "aps-environment": "development"
       }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
       "package": "com.tomassolano.fichajexpert",
       "versionCode": 1,
       "permissions": [
@@ -42,8 +32,7 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "output": "single"
     },
     "plugins": [
       "expo-router",
@@ -58,11 +47,9 @@
       [
         "expo-notifications",
         {
-          "icon": "./assets/images/notification-icon.png",
           "color": "#ffffff",
-          "sounds": ["./assets/sounds/notification.wav"],
           "mode": "production",
-          "isRemoteNotificationsEnabled": false  // Disable if not using push
+          "isRemoteNotificationsEnabled": false
         }
       ],
       [
