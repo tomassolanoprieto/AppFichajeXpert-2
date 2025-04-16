@@ -16,7 +16,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tomassolano.fichajexpert",
-      "buildNumber": "6",  // Incremented from previous build
+      "buildNumber": "10",  // Incremented from previous build
       "infoPlist": {
         "NSCameraUsageDescription": "FichajeXpert utiliza la cámara para escanear códigos QR y verificar fichajes de empleados",
         "NSMicrophoneUsageDescription": "El micrófono no se usa actualmente, pero es requerido por módulos de terceros",
