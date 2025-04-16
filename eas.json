@@ -1,0 +1,37 @@
+{
+  "cli": {
+    "version": ">= 6.0.0"  // Asegúrate de usar la versión correcta de EAS CLI
+  },
+  "build": {
+    "preview": {
+      "ios": {
+        "bundleIdentifier": "com.tomassolano.fichajexpert"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "bundleIdentifier": "com.tomassolano.fichajexpert.dev"  // Opcional para dev
+      }
+    },
+    "production": {
+      "ios": {
+        "bundleIdentifier": "com.tomassolano.fichajexpert",
+        "appleTeamId": "XTJ2R3527J",  // Reemplaza con tu Team ID real
+        "entitlements": {
+          "aps-environment": "development"  // Solo si usas push notifications
+        }
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "tomysolano@gmail.com",  // Tu Apple ID
+        "ascAppId": "1234567890",  // Opcional: ID de App Store Connect (si ya existe)
+        "appleTeamId": "XTJ2R3527J"  // Mismo que arriba
+      }
+    }
+  }
+}
