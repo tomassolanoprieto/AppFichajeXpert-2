@@ -46,7 +46,12 @@ export default {
       favicon: "./assets/images/favicon.png"
     },
     plugins: [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          origin: "https://yourappdomain.com"
+        }
+      ],
       [
         "expo-location",
         {
@@ -79,6 +84,27 @@ export default {
       eas: {
         projectId: "cc1af024-9bcf-4b49-830d-0f96f79898b5"
       }
+    },
+    // Configuración adicional para manejar versiones específicas
+    dependencies: {
+      "@expo/config-plugins": "~9.0.0",
+      "@react-native-community/datetimepicker": "8.2.0",
+      "@react-native-picker/picker": "2.9.0",
+      "expo": "~52.0.46",
+      "expo-camera": "~16.0.18",
+      "expo-file-system": "~18.0.12",
+      "expo-location": "~18.0.10",
+      "expo-notifications": "~0.29.14",
+      "expo-router": "~4.0.21",
+      "expo-secure-store": "~14.0.1",
+      "expo-sharing": "~13.0.1",
+      "expo-splash-screen": "~0.29.24",
+      "expo-system-ui": "~4.0.9",
+      "react-native": "0.76.9",
+      "react-native-gesture-handler": "~2.20.2",
+      "react-native-reanimated": "~3.16.1",
+      "react-native-screens": "~4.4.0",
+      "react-native-svg": "15.8.0"
     }
   }
 };
